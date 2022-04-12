@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 
+// get the matrix
 Eigen::Matrix<double, 1, 12>  derivative_cons(double T);
 Eigen::Matrix<double, 1, 12>  continuous_posi(double T);
 Eigen::Matrix<double, 1, 12>  continuous_velo(double T);
@@ -143,8 +144,8 @@ void minimumJerkTrajGen
 
     // get result
     coefficientMatrix = Condition_matrix.inverse() * boundary_matrix;
-    // ROS_INFO_STREAM ("the matrix is: ");
-    // ROS_INFO_STREAM (Condition_matrix);
+    // ROS_INFO_STREAM ("the Boundary_Matrix is:");
+    // ROS_INFO_STREAM ("\n" << Condition_matrix);
 
     // ------------------------ Put your solution above ------------------------
 }
